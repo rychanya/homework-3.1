@@ -21,8 +21,9 @@ def count_words(descriptions):
             lambda word: len(word) > 6, 
             description.split())
         for word in description_words:
-            words.setdefault(word, 0)
-            words[word] += 1
+            lower_word = word.lower()
+            words.setdefault(lower_word, 0)
+            words[lower_word] += 1
     return words
 
 
